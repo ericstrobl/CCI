@@ -56,6 +56,8 @@ The oracle outputs perfect conditional independence information.
 
 > suffStat$graph=a_DCG$graph; # the ground truth graph
 
+> plot(as(suffStat$graph,"graphNEL")) # plot the ground truth
+
 > if (length(a_DCG$S)>0){
     suffStat$S = max(nrow(a_DCG$graph_p)+1):nrow(a_DCG$graph);
   } else{
