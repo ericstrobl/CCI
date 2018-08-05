@@ -36,5 +36,5 @@ The algorithm essentially runs like pc() in the pcalg package:
 
 > G=cci(suffStat,gaussCItest,alpha=0.01,p=ncol(sample_DCG)) # run CCI
 
-> cci$maag #print the recovered MAAG
+> G$maag #print the recovered MAAG
 
