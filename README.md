@@ -50,7 +50,7 @@ G$maag[i,j] = 3 means j is an ancestor of i or S
 
 # How to Run the Oracle Version
 
-The oracle outputs perfect conditional independence info.
+The oracle outputs perfect conditional independence information.
 
 > a_DCG = generate_DCG_LE(15,2)
 
