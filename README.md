@@ -2,6 +2,8 @@
 
 A constraint-based algorithm for causal discovery with cycles, latent variables and/or selection bias. CCI runs like FCI but can handle cycles.
 
+CCI discovers the maximal almost ancestral graph (MAAG) of a causal graph G, provided that the global Markov property and d-separation faithfulness holds according to G.
+
 Details: https://arxiv.org/abs/1805.02087
 
 # Installation
