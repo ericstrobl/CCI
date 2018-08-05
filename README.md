@@ -20,7 +20,7 @@ The package depends on the MASS and pcalg packages on CRAN, so please install th
 
 The algorithm essentially runs like pc() in the pcalg package:
 
-> a_DCG = generate_DCG_LE(20,2) #instantiate a directed cyclic graph with 15 vertices and on average 2 edges per node. Automatically includes 0-3 selection and 0-3 latent variables.
+> a_DCG = generate_DCG_LE(20,2) #instantiate a directed cyclic graph with 20 vertices and on average 2 edges per node. Automatically includes 0-3 selection and 0-3 latent variables.
 
 > sample_DCG = sample_DCG_LE(nsamps=1000, a_DCG) #generate Gaussian samples from the DCG
 
