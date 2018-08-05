@@ -33,3 +33,5 @@ The package depends on the MASS and momentchi2 packages on CRAN, so please insta
 
 > G=cci(suffStat,gaussCItest,alpha=0.01,p=ncol(sample_DCG)) # run CCI
 
+> cci$maag #print the recovered MAAG
+
