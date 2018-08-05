@@ -1,6 +1,6 @@
 # Cyclic Causal Inference (CCI)
 
-A constraint-based algorithm for causal discovery with cycles, latent variables and/or selection bias. CCI runs like FCI but can handle cycles.
+CCI is a constraint-based algorithm for causal discovery with cycles, latent variables and/or selection bias. CCI runs like FCI but can handle cycles.
 
 CCI discovers the maximal almost ancestral graph (MAAG) of a causal graph G, provided that the global Markov property and d-separation faithfulness holds according to G.
 
@@ -8,7 +8,7 @@ Details: https://arxiv.org/abs/1805.02087
 
 # Installation
 
-The package depends on the MASS and momentchi2 packages on CRAN, so please install these first. Then:
+The package depends on the MASS and pcalg packages on CRAN, so please install these first. Then:
 
 > library(MASS)
 
@@ -21,6 +21,9 @@ The package depends on the MASS and momentchi2 packages on CRAN, so please insta
 > library(CCI)
 
 # Use
+
+The algorithm essentially runs like fci() in the pcalg package:
+
 > DCG = generate_DCG_LE(15,2) #instantiate a DCG
 
 > sample_DCG = sample_DCG_LE(nsamps=1000, DCG) #generate Gaussian samples from the DCG
