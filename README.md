@@ -67,3 +67,4 @@ G$maag[i,j] = 3 means j is an ancestor of i
 > G <- cci(suffStat, indepTest=dsepTest_fast,
                  alpha = 0.01, p=length(suffStat$actual_indices));
 
+> G$maag
