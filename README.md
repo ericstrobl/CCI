@@ -20,7 +20,7 @@ The package depends on the MASS and pcalg packages on CRAN, so please install th
 
 > library(CCI)
 
-# Use
+# How to Use After the Install
 
 The algorithm essentially runs like pc() in the pcalg package:
 
