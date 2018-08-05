@@ -54,10 +54,11 @@ The oracle outputs perfect conditional independence information.
 
 > a_DCG = generate_DCG_LE(20,2)
 
-> suffStat = get_suffStat_oracle(a_DCG)
+> suffStat = get_suffStat_oracle(a_DCG) # prepare all parameters for dsep oracle
 
-> G <- cci(suffStat, indepTest=dsepTest_fast,
-                 alpha = 0.01, p=length(suffStat$actual_indices));
+> plot(as(suffStat$graph,"graphNEL")) # plot the ground truth
+
+> G <- cci(suffStat, indepTest=dsepTest_fast, alpha = 0.01, p=length(suffStat$actual_indices)); # run cci
 
 > rownames(G$maag)=suffStat$actual_indices;
  
