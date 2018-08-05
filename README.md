@@ -54,7 +54,7 @@ The oracle outputs perfect conditional independence information.
 
 > a_DCG = generate_DCG_LE(15,2)
 
-> suffStat$graph=a_DCG$graph;
+> suffStat$graph=a_DCG$graph_p; # the ground truth graph
 
 > if (length(a_DCG$S)>0){
     suffStat$S = max(nrow(a_DCG$graph_p)+1):nrow(a_DCG$graph);
