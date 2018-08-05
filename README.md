@@ -24,7 +24,7 @@ The algorithm essentially runs like pc() in the pcalg package:
 
 > sample_DCG = sample_DCG_LE(nsamps=1000, a_DCG) #generate Gaussian samples from the DCG
 
-> suffStat=list() #all parameters needed by Fisher's z test
+> suffStat=list() # get all of the parameters needed by Fisher's z test
 
 > suffStat$C = cor(sample_DCG);
 
