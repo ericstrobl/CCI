@@ -10,10 +10,6 @@ Details: https://arxiv.org/abs/1805.02087
 
 The package depends on the MASS and pcalg packages on CRAN, so please install these first. Then:
 
-> library(MASS)
-
-> library(pcalg)
-
 > library(devtools)
 
 > install_github("ericstrobl/CCI")
@@ -24,9 +20,9 @@ The package depends on the MASS and pcalg packages on CRAN, so please install th
 
 The algorithm essentially runs like pc() in the pcalg package:
 
-> DCG = generate_DCG_LE(15,2) #instantiate a directed cyclic graph with 15 vertices and on average 2 edges per node. Automatically includes 0-3 selection and 0-3 latent variables.
+> a_DCG = generate_DCG_LE(15,2) #instantiate a directed cyclic graph with 15 vertices and on average 2 edges per node. Automatically includes 0-3 selection and 0-3 latent variables.
 
-> sample_DCG = sample_DCG_LE(nsamps=1000, DCG) #generate Gaussian samples from the DCG
+> sample_DCG = sample_DCG_LE(nsamps=1000, a_DCG) #generate Gaussian samples from the DCG
 
 > suffStat=list() #all parameters needed by Fisher's z test
 
@@ -49,4 +45,25 @@ G$maag[i,j] = 1 means CCI does *not* know if j is an ancestor or not an ancestor
 G$maag[i,j] = 2 means j is *not* an ancestor of i
 
 G$maag[i,j] = 3 means j is an ancestor of i
+
+# How to Run the Oracle Version
+
+> suffStat$graph=a_DCG$graph;
+
+> if (length(a_DCG$S)>0){
+    suffStat$S = max(nrow(a_DCG$graph_p)+1):nrow(a_DCG$graph);
+  } else{
+    suffStat$S = a_DCG$S;
+  }
+  
+> suffStat$L = a_DCG$L
+
+> suffStat$actual_indices= setdiff(1:nrow(a_DCG$graph),c(suffStat$L,suffStat$S))
+
+> suffStat$p =nrow(a_DCG$graph);
+
+> suffStat$data=matrix(0,2,length(suffStat$actual_indices));
+
+> cci_res <- cci(suffStat, indepTest=dsepTest_fast,
+                 alpha = 0.01, p=length(suffStat$actual_indices));
 
