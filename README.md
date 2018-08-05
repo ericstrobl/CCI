@@ -1,6 +1,6 @@
 # Cyclic Causal Inference (CCI)
 
-A constraint-based algorithm for causal discovery with cycles, latent variables and/or selection bias.
+A constraint-based algorithm for causal discovery with cycles, latent variables and/or selection bias. CCI runs like FCI but can handle cycles.
 
 Details: https://arxiv.org/abs/1805.02087
 
