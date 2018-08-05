@@ -18,7 +18,7 @@ The package depends on the MASS and pcalg packages on CRAN, so please install th
 
 # How to Run the Sample Version
 
-The algorithm essentially runs like pc() in the pcalg package. Below is an example for the Gaussian case:
+The algorithm essentially runs like pc() in the pcalg package:
 
 > a_DCG = generate_DCG_LE(20,2) #instantiate a directed cyclic graph with 20 vertices and on average 2 edges per node. Automatically includes 0-3 selection and 0-3 latent variables.
 
