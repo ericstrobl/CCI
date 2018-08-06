@@ -48,15 +48,15 @@ G$maag[i,j] = 3 means j is an ancestor of i or S
 
 The oracle outputs perfect conditional independence information.
 
-> a_DCG = generate_DCG_LE(20,2)
+> a_DCG = generate_DCG_LE(20,2) # generate a directed cyclic graph
 
 > suffStat = get_suffStat_oracle(a_DCG) # prepare all parameters for dsep oracle
 
-> plot(as(suffStat$graph,"graphNEL")) # plot the ground truth
+> plot(as(suffStat$graph,"graphNEL")) # plot the ground truth directed graph
 
 > G <- cci(suffStat, indepTest=dsepTest_fast, alpha = 0.01, p=length(suffStat$actual_indices)); # run cci
 
-> rownames(G$maag)=suffStat$actual_indices;
+> rownames(G$maag)=suffStat$actual_indices; #re-number the indices of the MAAG so that they correspond to the numberings in the directed cyclic graph
  
 > colnames(G$maag)=suffStat$actual_indices;
 
