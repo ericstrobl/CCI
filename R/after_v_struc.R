@@ -8,7 +8,7 @@ after_v_struc <- function (pag, sepset, suffStat, indepTest, alpha, verbose=FALS
     diag(pagt)=1;
     ind_sep <- which(pagt == 0, arr.ind = TRUE)
     
-    for (s in nrow(ind_sep)){
+    for (s in seq_len(nrow(ind_sep))){
       b = ind_sep[s,1];
       c = ind_sep[s,2];
       
