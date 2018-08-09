@@ -7,7 +7,7 @@
 IP_discovery <- function(suffStat,indepTest,alpha, p,max.cs=Inf){
 
   time_start <- proc.time();
-  skel <- skeleton_new(suffStat, indepTest, alpha, p = ncol(suffStat$data), m.max=max.cs)
+  skel <- skeleton_new(suffStat, indepTest, alpha, p = p, m.max=max.cs)
 
   G_sk <- as(skel@graph, "matrix")
   sepset_sk <- skel@sepset
