@@ -15,7 +15,7 @@ IP_discovery <- function(suffStat,indepTest,alpha, p,max.cs=Inf){
   time_skel = proc.time()-time_start;
 
   pdsepRes <- pdsep(skel@graph, suffStat, indepTest,
-                    ncol(suffStat$data), sepset_sk, alpha, skel@pMax, m.max=max.cs)
+                    p, sepset_sk, alpha, skel@pMax, m.max=max.cs)
 
   G <- pdsepRes$G
   sepset <- pdsepRes$sepset
