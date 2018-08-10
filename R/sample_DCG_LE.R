@@ -2,8 +2,10 @@ sample_DCG_LE <- function(nsamps, DCG){
 
 A=(DCG$graph_p)*(DCG$weights);
 
-p=nrow(DCG$graph_p);
+A=t(A);
 
+p=nrow(DCG$graph_p);
+ 
 Cov = solve(diag(p) - A)
 
 nsamps = round((1/(1-DCG$elim_prop))*nsamps);
