@@ -53,12 +53,12 @@ The oracle outputs perfect conditional independence information.
 
 Let S denote the selection variables
 
-G$maag[i,j] = 0 means that an inducing path does *not* exist between between i and j
+'G$maag[i,j] = 0' means that an inducing path does *not* exist between between i and j
 
-G$maag[i,j] not equal to 0 means there exists an inducing path between i and j
+'G$maag[i,j]' not equal to 0 means there exists an inducing path between i and j
 
-G$maag[i,j] = 1 means CCI does *not* know if j is an ancestor or not an ancestor of i or S
+'G$maag[i,j] = 1' means CCI does *not* know if j is an ancestor or not an ancestor of i or S
 
-G$maag[i,j] = 2 means j is *not* an ancestor of i or S
+'G$maag[i,j] = 2' means j is *not* an ancestor of i or S
 
-G$maag[i,j] = 3 means j is an ancestor of i or S
+'G$maag[i,j] = 3' means j is an ancestor of i or S
