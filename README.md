@@ -4,7 +4,10 @@ CCI is a constraint-based algorithm for causal discovery with cycles, latent var
 
 CCI discovers a partially oriented maximal almost ancestral graph (MAAG) of some directed graph G, provided that the global Markov property and d-separation faithfulness holds according to G. Such properties are reasonable when G is the directed graph of an SEM-IE and linearity holds, for example. 
 
-Details: https://arxiv.org/abs/1805.02087
+The academic article describing CCI in detail can be found [here](https://arxiv.org/abs/1805.02087).
+
+Please cite the above article if you use any of the code in this repository: [Bibtex](http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=2018arXiv180502087S&data_type=BIBTEX&db_key=PRE&nocookieset=1)
+
 
 # Installation
 
