@@ -1,7 +1,8 @@
 
 #' Cyclic Causal Inference (CCI) algorithm.
 #'
-#' Discovers the maximal almost ancestral graph (MAAG) of a causal graph G, provided that the global Markov property and d-separation faithfulness holds.
+#' Discovers a partially oriented maximal almost ancestral graph (MAAG) of a directed graph G, 
+#' provided that the global Markov property and d-separation faithfulness holds according to G.
 #'
 #' @param suffStat list of sufficient statistics needed by the CI test. E.g., the data or covariance matrix
 #' @param indepTest the CI test function
