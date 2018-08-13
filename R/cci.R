@@ -9,7 +9,7 @@
 #' @param labels (use labels or p) labels of variables
 #' @param p (use p or labels) number of variables
 #' @param skeleton_pre Number of features for conditioning set. Default is 25.
-#' @param seed The seed for controlling random number generation. Use if you want to replicate results exactly. Default is NULL.
+#' @param rules A logical vector indicating which of the 7 orientation rules to fire
 #' @return A list containing the partially oriented MAAG \code{paag} and statistic \code{Sta}
 #' @export
 
@@ -18,32 +18,7 @@
 cci <- function (suffStat, indepTest, alpha, labels, p, skeleton_pre=NULL,
                  rules = rep(TRUE, 7), verbose = FALSE)
 {
-  cl <- match.call()
-  if (!missing(p))
-    stopifnot(is.numeric(p), length(p <- as.integer(p)) ==
-                1, p >= 2)
-  if (missing(labels)) {
-    if (missing(p))
-      stop("need to specify 'labels' or 'p'")
-    labels <- as.character(seq_len(p))
-  }
-  else {
-    stopifnot(is.character(labels))
-    if (missing(p)) {
-      p <- length(labels)
-    }
-    else if (p != length(labels))
-      stop("'p' is not needed when 'labels' is specified, and must match length(labels)")
-    else message("No need to specify 'p', when 'labels' is given")
-  }
-  type <- match.arg(type)
-  if (type == "anytime" && m.max == Inf)
-    stop("To use the Anytime FCI you must specify a finite 'm.max'.")
-  if (type == "adaptive" && m.max != Inf)
-    stop("To use the Adaptive Anytime FCI you must not specify 'm.max'.")
-  if (conservative && maj.rule)
-    stop("Choose either conservative FCI or majority rule FCI")
-  cl <- match.call()
+ 
   if (verbose)
     cat("Compute Skeleton\n================\n")
 
@@ -60,8 +35,7 @@ cci <- function (suffStat, indepTest, alpha, labels, p, skeleton_pre=NULL,
 
 
   if (verbose)
-    cat("\nDirect egdes:\n=============\nUsing rules:", which(rules),
-        "\nCompute collider:\n")
+    cat("\nDirect egdes:\n=============\n")
 
   G <- v_struc(pag=G, sepset, unfVect = tripleList, verbose)
 
