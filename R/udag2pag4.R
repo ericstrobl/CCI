@@ -206,7 +206,7 @@ udag2pag4 <- function (pag, sepset, rules = rep(TRUE, 7), unfVect = NULL,
 
             rules_used = unique(c(rules_used,6))
             if (verbose)
-              cat("\nRule 6", "\nOrient:", a, "o-*", c,
+              cat("\nRule 5", "\nOrient:", a, "o-*", c,
                   "as", a, "-*", c, "\n")
           }
         }
@@ -241,7 +241,7 @@ udag2pag4 <- function (pag, sepset, rules = rep(TRUE, 7), unfVect = NULL,
 
                 rules_used = unique(c(rules_used,7))
                 if (verbose)
-                  cat("\nRule 7", "\nThere exists an uncovered potentially directed path between",
+                  cat("\nRule 6", "\nThere exists an uncovered potentially directed path between",
                       a, "and", c, ". Orient:", a, " -*",
                       c, "\n")
 
@@ -283,7 +283,7 @@ udag2pag4 <- function (pag, sepset, rules = rep(TRUE, 7), unfVect = NULL,
 
                     rules_used = unique(c(rules_used,81))
                     if (verbose)
-                      cat("\nRule 8 [easy]", "\nOrient:",
+                      cat("\nRule 7 [easy]", "\nOrient:",
                           a, "-*", c, "\n")
                   }
                   else if (!any(unfVect == triple2numb(p,
@@ -293,7 +293,7 @@ udag2pag4 <- function (pag, sepset, rules = rep(TRUE, 7), unfVect = NULL,
 
                     rules_used = unique(c(rules_used,81))
                     if (verbose)
-                      cat("\nRule 8 [easy]", "\nConservatively orient:",
+                      cat("\nRule 7 [easy]", "\nConservatively orient:",
                           a, "-*", c, "\n")
                   }
                 }
@@ -336,7 +336,7 @@ udag2pag4 <- function (pag, sepset, rules = rep(TRUE, 7), unfVect = NULL,
 
                                   # print(c(first.pos, sec.pos))
                                   if (verbose)
-                                    cat("\nRule 8", "\nOrient:",
+                                    cat("\nRule 7", "\nOrient:",
                                         a, "-*", c, "\n")
                                 }
                                 else if (!any(unfVect ==
@@ -349,7 +349,7 @@ udag2pag4 <- function (pag, sepset, rules = rep(TRUE, 7), unfVect = NULL,
 
                                   rules_used = unique(c(rules_used,82))
                                   if (verbose)
-                                    cat("\nRule 8", "\nConservatively orient:",
+                                    cat("\nRule 7", "\nConservatively orient:",
                                         a, "-*", c, "\n")
                                 }
                               }
