@@ -155,59 +155,9 @@ udag2pag4 <- function (pag, sepset, rules = rep(TRUE, 7), unfVect = NULL,
                           p_und[[1]][j], "as", p_und[[1]][j-1], "*-", p_und[[1]][j], "\n")
 
                   }
-
                 }
               }
-
             }
-
-
-            # indDff = c();
-            # for (f in seq_len(length(indDf))){
-            #   p_und <- is_one_undirected_path(pag,indDf[f],indC[c],b);
-            #
-            #   if (length(p_und)==1){
-            #     indDff = c(indDff, indDf[f])
-            #   }
-            # }
-            #
-            # if (length(indDff)==1){
-            #
-            #   #print(c(indDff,c,b))
-            #   p_und <- is_one_undirected_path(pag,indDff[1],indC[c],b);
-            #   # print(c(a,b,indC[c],indDff[1], p_und[[1]]))
-            #
-            #   # if (pag[a,indDff[1]]==1){
-            #   #   pag[a,indDff[1]]=2
-            #   #
-            #   #   rules_used = unique(c(rules_used,31))
-            #   #   if (verbose)
-            #   #     cat("\nRule 3a", "\nOrient:", a, "*-o",
-            #   #         indDff[1], "as", a, "*->", indDff[1], "\n")
-            #   # }
-            #
-            #   for (j in 2:length(p_und[[1]])){
-            #
-            #     if (pag[p_und[[1]][j], p_und[[1]][j-1]]==1){
-            #       pag[p_und[[1]][j], p_und[[1]][j-1]]=3;
-            #       rules_used = unique(c(rules_used,32))
-            #       if (verbose)
-            #         cat("\nRule 3b", "\nOrient:", p_und[[1]][j], "*-o",
-            #             p_und[[1]][j-1], "as", p_und[[1]][j], "*-", p_und[[1]][j-1], "\n")
-            #
-            #     }
-            #     if (pag[p_und[[1]][j-1], p_und[[1]][j]]==1){
-            #       pag[p_und[[1]][j-1], p_und[[1]][j]]=3;
-            #       rules_used = unique(c(rules_used,32))
-            #       if (verbose)
-            #         cat("\nRule 3b", "\nOrient:", p_und[[1]][j-1], "*-o",
-            #             p_und[[1]][j], "as", p_und[[1]][j-1], "*-", p_und[[1]][j], "\n")
-            #
-            #     }
-            #
-            #   }
-            # }
-
           }
         }
       }
