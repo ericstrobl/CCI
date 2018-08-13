@@ -63,9 +63,5 @@ cci <- function (suffStat, indepTest, alpha, labels, p, skeleton_pre=NULL,
   colnames(res$pag) <- rownames(res$pag) <- labels
 
   return(list(maag = res$pag, pre_OR_res = list_f$pag, rules_used = res$rules_used))
-  
-  # new("fciAlgo", amat = res, call = cl, n = integer(0), max.ord = as.integer(max.ordSKEL),
-  #     max.ordPDSEP = as.integer(max.ordPD), n.edgetests = n.edgetestsSKEL,
-  #     n.edgetestsPDSEP = n.edgetestsPD, sepset = sepset, pMax = pMax,
-  #     allPdsep = allPdsep)
+
 }
