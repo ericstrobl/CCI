@@ -14,7 +14,7 @@
 
 
 
-cci <- function (suffStat, indepTest, alpha, labels, p, skeleton_pre=NULL,
+cci <- function (suffStat, indepTest, alpha, p, skeleton_pre=NULL,
                  rules = rep(TRUE, 7), verbose = FALSE)
 {
  
