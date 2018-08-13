@@ -21,7 +21,7 @@ The package depends on the MASS and pcalg packages on CRAN, so please install th
 
 The algorithm essentially runs like pc() in the pcalg package. If you have your own data:
 
-> G=cci(suffStat,your_CItest,alpha=0.01,p=ncol(your_data))
+> G=cci(suffStat, your_CItest, alpha=0.01, p=ncol(your_data))
 
 where `suffStat` contains all the parameters/data needed for your CI test of choice (`your_CItest`). The variable `p` refers to the numbers of variables in the dataset.
 
