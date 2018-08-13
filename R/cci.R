@@ -15,11 +15,8 @@
 
 
 
-cci <- function (suffStat, indepTest, alpha, labels, p, skeleton_pre=NULL, skel.method = c("stable",
-                                                                                           "original", "stable.fast"), type = c("normal", "anytime",
-                                                                                                                                "adaptive"), fixedGaps = NULL, fixedEdges = NULL, NAdelete = TRUE,
-                 m.max = Inf, pdsep.max = Inf, rules = rep(TRUE, 7), doPdsep = TRUE,
-                 biCC = FALSE, conservative = FALSE, maj.rule = FALSE, verbose = FALSE)
+cci <- function (suffStat, indepTest, alpha, labels, p, skeleton_pre=NULL,
+                 rules = rep(TRUE, 7), verbose = FALSE)
 {
   cl <- match.call()
   if (!missing(p))
