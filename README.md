@@ -23,9 +23,9 @@ The algorithm essentially runs like pc() in the pcalg package. If you have your 
 
 > G=cci(suffStat, your_CItest, alpha=0.01, p=ncol(your_data))
 
-where `suffStat` contains all the parameters/data needed for your conditional independence (CI) test of choice (`your_CItest`). The variable `alpha` is the type I error rate for the CI test. The variable `p` refers to the numbers of variables in the dataset.
+where `suffStat` contains all the parameters/data needed for your conditional independence (CI) test of choice (`your_CItest`). The variable `alpha` is the type I error rate for the CI test. The variable `p` refers to the numbers of features in the dataset.
 
-Here is a sample run with synthetic data:
+Here is a sample run with synthetic Gaussian data, where we set the CI test to be Fisher's z-test by writing `your_CItest=gaussCItest`:
 
 > a_DCG = generate_DCG_LE(20,2) #instantiate a directed cyclic graph with 20 vertices and on average 2 edges per node. Automatically includes 0-3 selection and 0-3 latent variables.
 
