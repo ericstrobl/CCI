@@ -39,7 +39,7 @@ Here is a sample run with synthetic Gaussian data, where we set the CI test to b
 
 # How to Run the Oracle Version
 
-The oracle outputs perfect conditional independence information, so CCI should make zero errors in this case. This means that each adjacency in the output should correspond to an inducing path and each endpoint should correctly capture the ancestral/non-ancestral relationship. You can call the oracle by setting the CI test to be `dsepTest_fast`; this function reads off the d-separation relations directly from the ground truth directed graph.
+The oracle outputs perfect conditional independence information, so CCI should make zero errors in this case. This means that each adjacency in the output should correspond to an inducing path and each endpoint should correctly capture the ancestral/non-ancestral relationship. You can call the oracle by setting the CI test to be `dsepTest_fast`; this function reads off the d-separation relations directly from the ground truth directed graph. Here is an example:
 
 > a_DCG = generate_DCG_LE(20,2) # generate a directed cyclic graph
 
