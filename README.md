@@ -23,7 +23,7 @@ The algorithm essentially runs like pc() in the pcalg package. If you have your 
 
 > G=cci(suffStat, your_CItest, alpha=0.01, p=ncol(your_data))
 
-where `suffStat` contains all the parameters/data needed for your conditional independence (CI) test of choice (`your_CItest`). The variable `alpha` is the type I error rate for the CI test. The variable `p` refers to the numbers of features in the dataset.
+where `suffStat` contains all the parameters/data needed for your conditional independence (CI) test of choice (`your_CItest`). The variable `alpha` is the type I error rate for the CI test. The variable `p` refers to the number of features in the dataset.
 
 Here is a sample run with synthetic Gaussian data, where we set the CI test to be Fisher's z-test (`gaussCItest`):
 
