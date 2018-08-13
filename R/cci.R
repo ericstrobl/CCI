@@ -7,7 +7,7 @@
 #' @param indepTest the CI test function
 #' @param alpha the alpha value for the CI test
 #' @param p the number of variables
-#' @param skeleton_pre Number of features for conditioning set. Default is 25.
+#' @param skeleton_pre Pre-computed skeleton
 #' @param rules A logical vector indicating which of the 7 orientation rules to fire
 #' @return A list containing the partially oriented MAAG \code{paag} and statistic \code{Sta}
 #' @export
