@@ -1,8 +1,8 @@
-#' RFCI's v-structure discovery procedure adapted for F2CI
+#' FCI's skeleton discovery procedure adapted for CCI
 #' @param suffStat List containing suffStat$data
 #' @param indepTest The independence test
 #' @param alpha Type I error rate for indepTest
-#' @return List containing
+#' @return List containing the skeleton data
 
 IP_discovery <- function(suffStat,indepTest,alpha, p,max.cs=Inf){
 
