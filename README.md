@@ -35,7 +35,7 @@ Here is a sample run with synthetic Gaussian data, where we set the CI test to b
 
 > G=cci(suffStat,gaussCItest,alpha=0.01,p=ncol(sample_DCG)) # run CCI
 
-> G$maag #print the recovered MAAG
+> G$maag #print the recovered partially oriented MAAG
 
 # How to Run the Oracle Version
 
@@ -49,7 +49,7 @@ The oracle outputs perfect conditional independence information.
 
 > G <- cci(suffStat, indepTest=dsepTest_fast, alpha = 0.01, p=length(suffStat$actual_indices)); # run cci
 
-> rownames(G$maag)=suffStat$actual_indices; #re-number the indices of the MAAG so that they correspond to the numberings in the directed cyclic graph
+> rownames(G$maag)=suffStat$actual_indices; #re-number the indices of the partially oriented MAAG so that they correspond to the numberings in the directed cyclic graph
  
 > colnames(G$maag)=suffStat$actual_indices;
 
