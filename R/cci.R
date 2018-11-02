@@ -60,6 +60,6 @@ cci <- function (suffStat, indepTest, alpha, p, skeleton_pre=NULL,
   res <- udag2pag4(pag = list_f$pag, sepset, rules = rules, unfVect = tripleList,
                    verbose = verbose, rules_used = list_f$rules_used)
 
-  return(list(maag = res$pag, pre_OR_res = list_f$pag, rules_used = res$rules_used))
+  return(list(maag = res$pag, pre_OR_res = list_f$pag, rules_used = res$rules_used, sepset=sepset))
 
 }
