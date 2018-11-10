@@ -24,7 +24,7 @@ step_e <- function(pag, sepset, sup_sepset, suffStat, indepTest, alpha, verbose 
                 rules_used = unique(c(rules_used,-21))
                 pag[j,l]=3
                 if (verbose){
-                  cat("\nStep E", "\nOrient:", j, "*-o",
+                  cat("\nStep 5", "\nOrient:", j, "*-o",
                       l, "as:", j, "*-", l,
                       "\n")
 
@@ -42,7 +42,7 @@ step_e <- function(pag, sepset, sup_sepset, suffStat, indepTest, alpha, verbose 
             rules_used = unique(c(rules_used,-22))
             pag[indj_or,l]=2
             if (verbose){
-              cat("\nStep E", "\nOrient:", indj_or, "*-o",
+              cat("\nStep 5", "\nOrient:", indj_or, "*-o",
                   l, "as:", indj_or, "*->", l,
                   "\n")
 
