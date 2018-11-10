@@ -28,7 +28,7 @@ after_v_struc <- function (pag, sepset, suffStat, indepTest, alpha, verbose=FALS
               rules_used = unique(c(rules_used,-1))
               pag[b,a] = 2;
               if (verbose){
-                cat("\nAfter V:", "\nOrient:", a, "o-*",
+                cat("\nStep 3:", "\nOrient:", a, "o-*",
                     b, "as:", a, "<-*",b,
                     "\n") 
               }
