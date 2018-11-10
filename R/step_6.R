@@ -1,4 +1,4 @@
-step_f <- function(pag, sepset, sup_sepset, suffStat, indepTest, alpha, verbose = FALSE,
+step_6 <- function(pag, sepset, sup_sepset, suffStat, indepTest, alpha, verbose = FALSE,
                    rules_used=c()){
   ind <- which(pag != 0, arr.ind = TRUE)
   for (i in seq_len(nrow(ind))) {
