@@ -24,7 +24,7 @@ step_f <- function(pag, sepset, sup_sepset, suffStat, indepTest, alpha, verbose 
                 rules_used = unique(c(rules_used,-11))
 
                 if (verbose) {
-                  cat("\nStep F", "\nOrient:", b, "*-o",
+                  cat("\nStep 6", "\nOrient:", b, "*-o",
                       d, "as:", b, "*->", d,
                       "\n")
                 }
@@ -43,7 +43,7 @@ step_f <- function(pag, sepset, sup_sepset, suffStat, indepTest, alpha, verbose 
                  rules_used = unique(c(rules_used,-12))
 
                 if (verbose) {
-                  cat("\nStep F", "\nOrient:", b, "*-o",
+                  cat("\nStep 6", "\nOrient:", b, "*-o",
                       d, "as:", b, "*->", d,
                       "\n")
                 }
