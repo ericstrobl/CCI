@@ -49,11 +49,11 @@ cci <- function (suffStat, indepTest, alpha, p, skeleton_pre=NULL,
                            verbose = verbose)
 
   # Step 5
-  list_e <- step_e(list_pre_v$G, sepset, sup_sepset, suffStat, indepTest, alpha, verbose = verbose,
+  list_e <- step_5(list_pre_v$G, sepset, sup_sepset, suffStat, indepTest, alpha, verbose = verbose,
                    rules_used = list_pre_v$rules_used)
 
   # Step 6
-  list_f <- step_f(list_e$pag, sepset, sup_sepset, suffStat, indepTest,
+  list_f <- step_6(list_e$pag, sepset, sup_sepset, suffStat, indepTest,
                    alpha, verbose=verbose, list_e$rules_used)
 
   # Step 7
