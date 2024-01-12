@@ -7,6 +7,6 @@ Maintainer: Eric V. Strobl <ericvonstrobl@gmail.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 Depends: MASS, pcalg
-License: CC BY-NC-SA 4.0
+License: CC BY-NC 4.0
 Encoding: UTF-8
 LazyData: true
